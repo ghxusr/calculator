@@ -1,0 +1,26 @@
+.interface,
+.container,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    flex-direction: column;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.display-row {
+    align-self: end;
+}
