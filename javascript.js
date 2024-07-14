@@ -12,7 +12,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
     if (parseFloat(b) === 0) {
-        return "You know cannot do that";
+        return "You know can't do that";
     }
     else return parseFloat(a) / parseFloat(b);
 };
@@ -50,43 +50,43 @@ buttons.forEach((button) => {
         //Update current display value when number button is pressed
         switch(button.id) {
             case "one-btn":
-                displayValue = (displayValue + "1").substring(0, 25);
+                displayValue = (displayValue + "1").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "two-btn":
-                displayValue = (displayValue + "2").substring(0, 25);
+                displayValue = (displayValue + "2").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "three-btn":
-                displayValue = (displayValue + "3").substring(0, 25);
+                displayValue = (displayValue + "3").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "four-btn":
-                displayValue = (displayValue + "4").substring(0, 25);
+                displayValue = (displayValue + "4").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "five-btn":
-                displayValue = (displayValue + "5").substring(0, 25);
+                displayValue = (displayValue + "5").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "six-btn":
-                displayValue = (displayValue + "6").substring(0, 25);
+                displayValue = (displayValue + "6").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "seven-btn":
-                displayValue = (displayValue + "7").substring(0, 25);
+                displayValue = (displayValue + "7").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "eight-btn":
-                displayValue = (displayValue + "8").substring(0, 25);
+                displayValue = (displayValue + "8").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "nine-btn":
-                displayValue = (displayValue + "9").substring(0, 25);
+                displayValue = (displayValue + "9").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             case "zero-btn":
-                displayValue = (displayValue + "0").substring(0, 25);
+                displayValue = (displayValue + "0").substring(0, 22);
                 currentDisplay.textContent = displayValue;
                 break;
             //Call functions for respective buttons pressed
@@ -123,13 +123,13 @@ buttons.forEach((button) => {
                     secondNumber = displayValue;
                 }
                 if (firstNumber != "" && secondNumber != "" && operator != "") {
-                    displayValue = (operate(firstNumber, secondNumber, operator)).toString().substring(0, 25);
+                    displayValue = (operate(firstNumber, secondNumber, operator)).toString().substring(0, 22);
                     currentDisplay.textContent = displayValue;
                     firstNumber = "";
                     secondNumber = "";
                     operator = "";
                     //Clear stored value when  dividing by zero
-                    if (displayValue === "You know cannot do that") {
+                    if (displayValue === "You know can't do that") {
                     displayValue = "";
                     }
                 }
