@@ -1,20 +1,20 @@
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 };
 
 function subtract(a, b) {
-    return parseInt(a) - parseInt(b);
+    return parseFloat(a) - parseFloat(b);
 };
 
 function multiply(a, b) {
-    return parseInt(a) * parseInt(b);
+    return parseFloat(a) * parseFloat(b);
 };
 
 function divide(a, b) {
-    if (parseInt(b) === 0) {
+    if (parseFloat(b) === 0) {
         return "You know cannot do that";
     }
-    else return parseInt(a) / parseInt(b);
+    else return parseFloat(a) / parseFloat(b);
 };
 
 let firstNumber = "";
@@ -50,43 +50,43 @@ buttons.forEach((button) => {
         //Update current display value when number button is pressed
         switch(button.id) {
             case "one-btn":
-                displayValue += "1";
+                displayValue = (displayValue + "1").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "two-btn":
-                displayValue += "2";
+                displayValue = (displayValue + "2").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "three-btn":
-                displayValue += "3";
+                displayValue = (displayValue + "3").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "four-btn":
-                displayValue += "4";
+                displayValue = (displayValue + "4").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "five-btn":
-                displayValue += "5";
+                displayValue = (displayValue + "5").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "six-btn":
-                displayValue += "6";
+                displayValue = (displayValue + "6").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "seven-btn":
-                displayValue += "7";
+                displayValue = (displayValue + "7").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "eight-btn":
-                displayValue += "8";
+                displayValue = (displayValue + "8").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "nine-btn":
-                displayValue += "9";
+                displayValue = (displayValue + "9").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             case "zero-btn":
-                displayValue += "0";
+                displayValue = (displayValue + "0").substring(0, 25);
                 currentDisplay.textContent = displayValue;
                 break;
             //Call functions for respective buttons pressed
@@ -123,7 +123,7 @@ buttons.forEach((button) => {
                     secondNumber = displayValue;
                 }
                 if (firstNumber != "" && secondNumber != "" && operator != "") {
-                    displayValue = (operate(firstNumber, secondNumber, operator)).toString();
+                    displayValue = (operate(firstNumber, secondNumber, operator)).toString().substring(0, 25);
                     currentDisplay.textContent = displayValue;
                     firstNumber = "";
                     secondNumber = "";
